@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center fixed;
+  background-size: cover;
+
+  /* Center the .App vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  background-color: rgba(255, 255, 255, 0.95);
+  max-width: 1500px;
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Heading */
+.App h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #1a1a1a;
+}
+
+/* Scrollable Table Container */
+.table-container {
+  max-height: 800px;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+th, td {
+  padding: 6px 10px;
+  font-size: 13px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  line-height: 1.4;
+}
+
+th {
+  background-color: #f5f7fa;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f9fbfd;
+}
+
+tfoot td {
+  background-color: #f0f4f8;
+  padding: 6px 10px;
+}
+
+tfoot input {
+  width: 100%;
+  font-size: 12px;
+  padding: 4px;
+}
+
+/* Buttons */
+button.bp4-button {
+  margin-right: 8px;
+  font-size: 13px;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button-group {
+  display: flex;
+  gap: 10px; /* Adds consistent spacing between buttons */
+}
+
+button.edit {
+  background-color: #28a745; /* Green */
+  color: white;
+   
+}
+
+button.delete {
+  background-color: #dc3545; /* Red */
+  color: white;
+ 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .App {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .table-container {
+    max-height: none;
+    overflow: auto;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    background: #fff;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  td::before {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #444;
+    text-align: left;
+  }
+
+  td:nth-of-type(1)::before { content: "ID"; }
+  td:nth-of-type(2)::before { content: "Name"; }
+  td:nth-of-type(3)::before { content: "Email"; }
+  td:nth-of-type(4)::before { content: "Website"; }
+  td:nth-of-type(5)::before { content: "Action"; }
+}
